@@ -1,0 +1,42 @@
+<% if @list.errors.any? %>
+  
+  <div class="errorbox">
+    <%= link_to 'x', :back , class: "errorword" %>
+    <h2>We have some errors here !</h2>
+    <ul class="errorlist">
+      <% @list.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+
+<div class="form todolist">
+  <div class="todolist_itme">
+    <h1> Todo List </h1>
+    <%= form_for @list do |f| %>
+      <div class="form-group">
+        <%= f.label :name, "Name" %>
+        <br>
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :duedate, "Due Date" %>
+        <br>
+        <%= f.date_select :duedate, {use_month_numbers: true} %>
+      </div>
+      <div class="form-group">
+        <%= f.label :note, "Note" %>
+        <br>
+        <%= f.text_area :note, class: "form-control" %>
+      </div>
+
+      <%# button 這個變數，分別在 new.html.erb & edit.html.erb 中設定 %>
+      <%= f.submit button, class: 'btn btn-success' %>
+      <%= link_to 'BACK', lists_path() , class: 'btn btn-default' %>
+
+    <% end %>
+  </div>
+</div>

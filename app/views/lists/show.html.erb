@@ -1,0 +1,26 @@
+<div class="form todolist">
+  <div class="todolist_itme">
+    <h1> Todo List </h1>
+    <%= form_for @list do |f| %>
+      <div class="form-group">
+        <%= f.label :name, "Name" %>
+        <br>
+        <%= f.text_field :name, class: "form-control",disabled: true %>
+      </div>
+      <div class="form-group">
+        <%= f.label :duedate, "Due Date" %>
+        <br>
+        <%= f.date_select :duedate, {use_month_numbers: true},disabled: true %>
+      </div>
+      <div class="form-group">
+        <%= f.label :note, "Note" %>
+        <br>
+        <%= f.text_area :note, class: "form-control",disabled: true %>
+      </div>
+
+
+      <%= link_to 'BACK', lists_path() , class: 'btn btn-default' %>
+
+    <% end %>
+  </div>
+</div>

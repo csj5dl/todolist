@@ -1,0 +1,71 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import 'bootstrap-sprockets';
+ @import 'bootstrap';
+
+
+ // ================partial page==============
+
+ .errorbox {
+   background-color: rgba(223,240,216,0.9);
+   color: red;
+   border-radius: 8px;
+   position: absolute;
+   font-size: 16px;
+   left: 30%;
+ }
+
+ .errorlist {
+   list-style: none;
+   padding: 0;
+ }
+
+ .errorword {
+   color: red;
+ }
+
+ .container {
+  border: px solid #DCDCDC;
+  border-radius: 10px;
+  margin: 50px auto;
+  padding:0px;
+  width: 800px;
+  background: #ffffff;
+}
+
+.todolist {
+ border: px solid #DCDCDC;
+ border-radius: 10px;
+ margin: 50px auto;
+ padding:0px;
+ width: 500px;
+ background: #ffffff;
+ background-color: #CCEEFF;
+}
+
+.todolist_itme {
+ border: px solid #DCDCDC;
+ border-radius: 10px;
+ margin: 50px auto;
+ padding:0px;
+ width: 400px;
+}
+
+
+.todolist_show {
+ disabled: "disabled";
+}
